@@ -1,0 +1,4 @@
+repo # symbolic link to Arma 3 sync repositories
+squads # auto generated squad xml by control panel
+squadxml # auto generated squad xml by taw.net crawler
+ssl # no idea, sounds important
