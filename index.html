@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>TAW Arma - 1st Battalion</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">    
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- script references -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Noscript message -->
+    <div class="row">
+      <div class="col-md-12">
+        <noscript>
+          <div class="alert alert-warning text-center"><strong>Javascript is disabled.</strong> Some parts of this website will not work correctly.</div>
+        </noscript>
+      </div>
+    </div>
+    <!-- Logo -->
+    <div class="row">
+      <div class="col-md-8"></div>
+      <div class="col-md-4 text-right static-logo"><img id="logo" src="img/taw.png" alt="TAW Logo"/></div>
+    </div>
+  </div>
+
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-bg-img item active" style="background:url(http://images.akamai.steamusercontent.com/ugc/276222511129336156/4AB0AA2BB431019BC7EBA60F6E2D99CD44CEEBE1/); background-position: center center; background-size:cover; background-repeat:no-repeat;"></div>
+      <div class="carousel-bg-img item" style="background:url(http://images.akamai.steamusercontent.com/ugc/264964779787143100/66B59C3D940973E263ADA76FF9701AA1D3F86B4D/); background-position: center center; background-size:cover; background-repeat:no-repeat;"></div>
+    </div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var bootCarousel = $(".carousel");
+			bootCarousel.append("<ol class='carousel-indicators'></ol>");
+			var indicators = $(".carousel-indicators");
+			bootCarousel.find(".carousel-inner").children(".item").each(function(index) {
+			    (index === 0) ?
+			    indicators.append("<li data-target='#MyCarousel' data-slide-to='" + index + "' class='active'></li>") :
+			    indicators.append("<li data-target='#MyCarousel' data-slide-to='" + index + "'></li>");
+			});
+		});
+	</script>
+    <a class="left carousel-control" href="#carousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+    <!--main-->
+    <div class="container" id="main">
+        <div class="row">
+
+            <div class="col-md-4 col-sm-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading"><span class="glyphicon glyphicon-circle-arrow-down pull-right"></span>
+                        <h4>Addons</h4>
+                    </div>
+                    <div class="panel-body">
+                        <h4>Required</h4>
+                        <div class="list-group">
+                            <a href="http://am1.taw.net/repo/am1/.a3s/autoconfig" class="list-group-item">  http://am1.taw.net/repo/am1/.a3s/autoconfig
+                              <span class="badge">1.0</span></a>
+                        </div>
+                        <h4>Optional</h4>
+                        <div class="list-group">
+                            <a href="http://bootply.com/tagged/modal" class="list-group-item">JSRS
+                              <span class="badge">2.1</span><span class="label label-primary"></span></a>
+                            <a href="http://bootply.com/tagged/datetime" class="list-group-item">Blastcore
+                              <span class="badge">RC3</span><span class="label label-primary"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 col-sm-6">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading"><span class="glyphicon glyphicon-flag pull-right"></span>
+                        <h4>Links</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="http://taw.net" class="list-group-item">Website</a>
+                            <a href="http://taw.net/forums/t/10136.aspx" class="list-group-item">Media Thread</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                 <div class="panel panel-primary">
+                    <div class="panel-heading"><span class="glyphicon glyphicon-time pull-right"></span>
+                        <h4>Practices are when?</h4>
+                    </div>
+                    <div class="panel-body">
+		               <table class="table">
+		                        <thead>
+		                            <tr>
+		                                <th >
+		                                    Type
+		                                </th>
+		                                <th>
+		                                    Time
+		                                </th>
+		                            </tr>
+		                        </thead>
+		                        <tbody>
+		                            <tr>
+		                                <td >
+		                                    Mandatory
+		                                </td>
+		                                <td>
+		                                    Sunday at 19:30 (GMT)
+		                                </td>
+		                            </tr>
+		                            <tr>
+		                                <td >
+		                                    Mandatory
+		                                </td>
+		                                <td>
+		                                    Tuesday at 19:30 (GMT)
+		                                </td>
+		                            </tr>
+		                            <tr>
+		                                <td >
+		                                    Optionals
+		                                </td>
+		                                <td>
+		                                    Saturday at 18:30 (GMT)
+		                                </td>
+		                            </tr>
+		                        </tbody>
+		                    </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading"><span class="glyphicon glyphicon-question-sign pull-right"></span>
+                        <h4>Guides</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <div class="list-group">
+              <a class="list-group-item" href="https://docs.google.com/document/d/1P3h2xuuhjF38YzNBtC-1DyIJ8VwnLMexgQeInGHZUgo/edit?usp=sharing" target="_blank">BTSync<br><small>Simplified TAW modpack installation and syncing</small></a>
+              <a class="list-group-item" href="https://docs.google.com/document/d/1HC0Gad4kP-N2jH_6-QituY9kqtvfU5Hfd8-XWAVf260/edit?usp=sharing" target="_blank">Arma 3 Sync<br><small>How to set it up for syncing and installing the modpack.</small></a>
+              <a class="list-group-item" href="https://docs.google.com/a/mattgraham.me/presentation/d/15-Vx8eyZYZiSBfUEMDJLRR9BDyZ2uX71VF_r_UsnQA0/edit#slide=id.p" target="_blank">TFR Radios<br><!-- <small>How to set it up, tips and troubleshooting</small> --></a>
+              <a class="list-group-item" href="https://docs.google.com/drawings/d/1OSRdPgT6nafBdsI_2C4xFKKcJPATuOvk8SzrGEntF6c/edit" target="_blank">Radio Chart<br><small>1st Battalion Radio Chart</small></a>
+            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+        <!--/row-->
+
+        <br>
+
+        <div class="clearfix"></div>
+
+        <!-- <div class="col-md-12 text-center"><p><a href="http://www.bootply.com/download/90113" target="_ext">Download Google Plus Style Template</a><br><a href="http://bootply.com/templates" target="_ext">More Bootstrap Templates by @Bootply</a></p></div>
+        <hr> -->
+
+    </div>
+    </div>
+    <!--/main-->
+
+    <!--about modal-->
+    <div id="aboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h2 class="text-center">About</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-12 text-center">
+                        <a href="http://www.bootply.com/DwnjTNuvVt">This Bootstrap Template</a>
+                        <br>was made with <i class="glyphicon glyphicon-heart"></i> by <a href="http://bootply.com/templates">Bootply</a>
+                        <br>
+                        <br>
+                        <a href="https://github.com/iatek/bootstrap-google-plus">GitHub Fork</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
