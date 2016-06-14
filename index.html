@@ -17,6 +17,11 @@
     <!-- script references -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.Core.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.min.js"></script>
+
+  
 </head>
 
 <body>
@@ -65,10 +70,42 @@
     <div class="container" id="main">
         <div class="row">
 
+
             <div class="col-md-4 col-sm-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading"><span class="glyphicon glyphicon-open pull-right"></span><h4>Servers</h4></div>
+                    <div class="panel-body">
+                    	<div class="alert alert-info" role="alert">
+                    	    <h4>IP = am2.taw.net</h4>
+                    		<h4>Password = rewards</h4>
+                    		Click the server name to join it
+                    	</div>
+
+                        <div class="list-group">
+
+<a href="steam://run/107410//-mod=@CBA_AM2;@TAW_DIV_CORE;@TAW_AM2_CONTENT;@TAW_AM2_CUP;@TAW_AM2_MAPS;%20-noLauncher%20-skipIntro%20-noSplash%20-noPause%20-world=empty%20-noLogs%20-noFilePatching%20-connect=149.202.223.31%20-port=2612%20-password=overlord" class="list-group-item">Battalion Server = 2402<span class="badge">mandatory</span></a>
+<a class="list-group-item">PP-Optional Ops = 2442<span class="badge">optional</span></a>
+<a class="list-group-item">Loadout & squad box creation = 2922</a>
+<a class="list-group-item">CTC1 = 2702</a>
+<a class="list-group-item">CTC2 = 2712</a>
+<a class="list-group-item">RHQ1 = 2722</a>
+<a class="list-group-item">RHQ2 = 2732</a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-4 col-sm-6">
+
+
                 <div class="panel panel-primary">
                     <div class="panel-heading"><span class="glyphicon glyphicon-file pull-right"></span><h4>Modpacks</h4></div>
                     <div class="panel-body">
+
 	                    <table class="table">
 	                        <thead>
 	                            <tr>
@@ -125,25 +162,9 @@
 	                    </table>
 	                </div>
                 </div>
-            </div>
 
 
-            <div class="col-md-4 col-sm-6">
-
-                <div class="panel panel-primary">
-                    <div class="panel-heading"><span class="glyphicon glyphicon-flag pull-right"></span>
-                        <h4>Links</h4>
-                    </div>
-                    <div class="panel-body">
-                        <div class="list-group">
-                            <a href="http://taw.net" class="list-group-item">Website</a>
-                            <a href="http://taw.net/forums/t/10136.aspx" class="list-group-item">Media Thread</a>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-
-                 <div class="panel panel-primary">
+               	<div class="panel panel-primary">
                     <div class="panel-heading"><span class="glyphicon glyphicon-time pull-right"></span>
                         <h4>Practices are when?</h4>
                     </div>
@@ -188,10 +209,18 @@
 	                    </table>
                     </div>
                 </div>
+                
+
 
             </div>
 
+
+
+
             <div class="col-md-4 col-sm-6">
+
+
+
                 <div class="panel panel-primary">
                     <div class="panel-heading"><span class="glyphicon glyphicon-question-sign pull-right"></span><h4>Guides</h4></div>
                     <div class="panel-body">
@@ -203,38 +232,29 @@
 <a class="list-group-item" href="https://docs.google.com/document/d/1fl07M3yJeGIkzG0rd58Nhod2n2_04Y4Ipv6LLm6vrWg" target="_blank">Arma 3 Sync<br><small>How to set it up for syncing and installing the modpack.</small></a>
 <a class="list-group-item" href="https://docs.google.com/document/d/104ruCrBSDdKp4hYG_RWjkFBIM-E9Xq97gLncT57i52Q" target="_blank">Gameplay FAQs/Tips<br><small>Got a question ? Somone probably already asked and answered it.</small></a>
 
-            </div>
+            				</div>
                         </div>
                     </div>
                 </div>
 
-            </div>
 
 
-            <div class="col-md-4 col-sm-6">
+
                 <div class="panel panel-primary">
-                    <div class="panel-heading"><span class="glyphicon glyphicon-open pull-right"></span><h4>Servers</h4></div>
+                    <div class="panel-heading"><span class="glyphicon glyphicon-flag pull-right"></span>
+                        <h4>Links</h4>
+                    </div>
                     <div class="panel-body">
-                    	<h4>IP = am2.taw.net</h4>
-                    	<h4>Password = rewards</h4>
                         <div class="list-group">
-
-<a class="list-group-item">Battalion Server = 2402<span class="badge">mandatory</span></a>
-<a class="list-group-item">PP-Optional Ops = 2442<span class="badge">optional</span></a>
-<a class="list-group-item">Loadout & squad box creation = 2922</a>
-<a class="list-group-item">CTC1 = 2702</a>
-<a class="list-group-item">CTC2 = 2712</a>
-<a class="list-group-item">RHQ1 = 2722</a>
-<a class="list-group-item">RHQ2 = 2732</a>
-
+                            <a href="http://taw.net" class="list-group-item">Website</a>
+                            <a href="http://taw.net/forums/t/10136.aspx" class="list-group-item">Media Thread</a>
                         </div>
+                        <div class="clearfix"></div>
                     </div>
                 </div>
 
+
             </div>
-
-
-
 
 
 
@@ -275,6 +295,8 @@
             </div>
         </div>
     </div>
+
+	<script src="js/application.js"></script>
 
 </body>
 
