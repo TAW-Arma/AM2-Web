@@ -5,7 +5,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>TAW Arma - 1st Battalion</title>
+    <title>TAW Arma - 2nd Battalion</title>
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">    
@@ -25,6 +25,32 @@
 </head>
 
 <body>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    ZeroClipboard.config(
+    {
+        swfPath: 'https://cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.swf',
+        forceHandCursor: true,
+    });
+    var client = new ZeroClipboard($(".copy-button"));
+});
+
+
+var client = new ZeroClipboard( document.getElementById("copy-button") );
+
+client.on( "ready", function( readyEvent ) {
+  // alert( "ZeroClipboard SWF is ready!" );
+
+  client.on( "aftercopy", function( event ) {
+    // `this` === `client`
+    // `event.target` === the element that was clicked
+    event.target.style.display = "none";
+    alert("Copied text to clipboard: " + event.data["text/plain"] );
+  });
+});
+</script>
+
   <div class="container">
     <!-- Noscript message -->
     <div class="row">
@@ -78,7 +104,7 @@
                         <h4>Latest info from Twitter</h4>
                     </div>
                     <div class="panel-body">        
-                        <a class="twitter-timeline" href="https://twitter.com/TAW_net_Arma">Tweets by TAW.net Arma</a> <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <a class="twitter-timeline" data-height="1000" href="https://twitter.com/TAW_net_Arma">Tweets by TAW_net_Arma</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></script>
                     </div>
                 </div>
             </div>
@@ -94,20 +120,42 @@
                         <div class="alert alert-info" role="alert">
                             <h4>IP = am2.taw.net</h4>
                             <h4>Password = rewards</h4>
-                            <strike>Click the server name to join it</strike>
+                            Click the server name to join it, click accept, open steam, click OK.
 
                         </div>
 
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $(".server-link").each(function(){
+        var $this = $(this);
+
+        var modpack = "";
+        if($this.hasClass("normal-modpack")) modpack = "@taw_am2_alive;@taw_am2_cba;@taw_am2_content;@taw_am2_cup;@taw_div_core;";
+        if($this.hasClass("optional-modpack")) modpack = "@taw_am2_alive;@taw_am2_cba;@taw_am2_content;@taw_am2_cup;@taw_div_core;@optional";
+        if($this.hasClass("ww2-modpack")) modpack = "@taw_am2_cba;@taw_div_core;@ww2";
+
+        var password = "rewards"
+        if($this.attr("data-password")) password = $this.attr("data-password");
+
+        var port = $this.attr('data-port');
+
+        var href="steam://run/107410//-mod="+modpack+"%20-noLauncher%20-skipIntro%20-noSplash%20-noPause%20-world=empty%20-noLogs%20-noFilePatching%20-connect=am2.taw.net%20-port="+port+"%20-password="+password;
+
+        $this.attr('href', href);
+    });
+
+});
+</script>
                         <div class="list-group">
-
-<a href="steam://run/107410//-mod=@CBA_AM2;@TAW_DIV_CORE;@TAW_AM2_CONTENT;@TAW_AM2_CUP;@TAW_AM2_MAPS;%20-noLauncher%20-skipIntro%20-noSplash%20-noPause%20-world=empty%20-noLogs%20-noFilePatching%20-connect=149.202.223.31%20-port=2612%20-password=overlord" class="list-group-item">Battalion Server = 2402<span class="badge">mandatory</span></a>
-<a class="list-group-item">PP-Optional Ops = 2442<span class="badge">optional</span></a>
-<a class="list-group-item">Loadout & squad box creation = 2922</a>
-<a class="list-group-item">CTC1 = 2702</a>
-<a class="list-group-item">CTC2 = 2712</a>
-<a class="list-group-item">RHQ1 = 2722</a>
-<a class="list-group-item">RHQ2 = 2732</a>
-
+<a class="list-group-item server-link normal-modpack" data-port="2402">Battalion Server = 2402<span class="badge">mandatory event</span></a>
+<a class="list-group-item server-link optional-modpack" data-password="donut" data-port="2442">Optional ops = 2442<span class="badge">optional event</span></a>
+<a class="list-group-item server-link ww2-modpack" data-password="donut" data-port="2442">WW2 = 2442<span class="badge">optional event</span></a>
+<a class="list-group-item server-link normal-modpack" data-port="2922">Loadout & squad box creation = 2922</a>
+<a class="list-group-item server-link normal-modpack" data-port="2702">CTC1 = 2702</a>
+<a class="list-group-item server-link normal-modpack" data-port="2712">CTC2 = 2712</a>
+<a class="list-group-item server-link normal-modpack" data-port="2722">RHQ1 = 2722</a>
+<a class="list-group-item server-link normal-modpack" data-port="2732">RHQ2 = 2732</a>
                         </div>
                     </div>
                 </div>
@@ -146,6 +194,16 @@
                                     </td>
                                     <td style="text-align: right;">
                                         <button class="btn btn-xs btn-success copy-button" data-clipboard-text="http://am2.taw.net/repo/optional/.a3s/autoconfig" title="Click to copy me.">
+                                            Copy
+                                        </button>
+                                    </td>
+                                </tr>
+                                 <tr data-clipboard-text="http://am2.taw.net/repo/optional/.a3s/autoconfig">
+                                    <td style="text-align: left;">
+                                         WW2
+                                    </td>
+                                    <td style="text-align: right;">
+                                        <button class="btn btn-xs btn-success copy-button" data-clipboard-text="http://am2.taw.net/repo/WW2/.a3s/autoconfig" title="Click to copy me.">
                                             Copy
                                         </button>
                                     </td>
@@ -240,8 +298,7 @@
                     </div>
                     <div class="panel-body">
                         <div class="list-group">
-                            <a href="http://taw.net" class="list-group-item">Website</a>
-                            <a href="http://taw.net/forums/t/10136.aspx" class="list-group-item">Media Thread</a>
+                            <a href="http://taw.net" class="list-group-item">TAW website</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -255,7 +312,7 @@
                         <div class="list-group">
                             <div class="list-group">
 
-<a class="list-group-item" href="http://i.imgur.com/uQ7ieA4.png" target="_blank">Radio Chart<br><small>2nd Battalion Radio Chart</small></a>
+<a class="list-group-item" href="https://docs.google.com/drawings/d/1_ywe1ZCiBhZf-5L_JSezNntL3XKrVUC9Acm7zo4NMm0" target="_blank">Radio Chart<br><small>2nd Battalion Radio Chart</small></a>
 <a class="list-group-item" href="https://docs.google.com/a/mattgraham.me/presentation/d/15-Vx8eyZYZiSBfUEMDJLRR9BDyZ2uX71VF_r_UsnQA0/edit#slide=id.p" target="_blank">TFR Radios<br><!-- <small>How to set it up, tips and troubleshooting</small> --></a>
 <a class="list-group-item" href="https://docs.google.com/document/d/1fl07M3yJeGIkzG0rd58Nhod2n2_04Y4Ipv6LLm6vrWg" target="_blank">Arma 3 Sync<br><small>How to set it up for syncing and installing the modpack.</small></a>
 <a class="list-group-item" href="https://docs.google.com/document/d/104ruCrBSDdKp4hYG_RWjkFBIM-E9Xq97gLncT57i52Q" target="_blank">Gameplay FAQs/Tips<br><small>Got a question ? Somone probably already asked and answered it.</small></a>
@@ -307,8 +364,6 @@
             </div>
         </div>
     </div>
-
-	<script src="js/application.js"></script>
 
 </body>
 
