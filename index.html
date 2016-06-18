@@ -314,10 +314,6 @@ $(".server-link").each(function(){
 
 <script type="text/javascript">
 $(document).ready(function(){
-	ZeroClipboard.config(
-	{
-		swfPath: 'https://cdn.jsdelivr.net/zeroclipboard/2.2.0/ZeroClipboard.swf',
-	});
 	var client = new ZeroClipboard($(".copy-button"));
 	client.on( "ready", function( readyEvent ) {
 		console.log( "ZeroClipboard SWF is ready!");
