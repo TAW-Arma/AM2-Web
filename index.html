@@ -93,7 +93,7 @@
 
 
 			<div class="panel panel-primary">
-				<div class="panel-heading"><span class="glyphicon glyphicon-open pull-right"></span><h4>Servers</h4></div>
+				<div class="panel-heading"><span class="glyphicon glyphicon-file pull-right"></span><h4>Servers</h4></div>
 				<div class="panel-body">
 					<div class="alert alert-info" role="alert">
 						<h4>IP = am2.taw.net</h4>
@@ -118,7 +118,7 @@ $(".server-link").each(function(){
 
 	var port = $this.attr('data-port');
 
-	var href="steam://run/107410//-noSplash%20-noPause%20-world=empty%20-noLogs%20-connect=am2.taw.net%20-port="+port+"%20-password="+password+"%20-mod="+modpack;
+	var href="steam://run/107410//-noLauncher%20-noSplash%20-noPause%20-world=empty%20-noLogs%20-connect=am2.taw.net%20-port="+port+"%20-password="+password+"%20-mod="+modpack;
 
 	$this.attr('href', href);
 });
@@ -140,8 +140,9 @@ $(".server-link").each(function(){
 
 
 
+
 			<div class="panel panel-primary">
-				<div class="panel-heading"><span class="glyphicon glyphicon-file pull-right"></span><h4>Modpacks</h4></div>
+				<div class="panel-heading"><span class="glyphicon glyphicon-open pull-right"></span><h4>Modpacks</h4></div>
 				<div class="panel-body">
 
 					<table class="table">
