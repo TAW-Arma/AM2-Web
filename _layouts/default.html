@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>{{ page.title }}</title>
+	<meta name="generator" content="Bootply" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">    
+	<!--[if lt IE 9]>
+	  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link href="assets/styles.css" rel="stylesheet">
+
+	<!-- script references -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<script src="assets/ZeroClipboard.min.js"></script>
+
+  
+</head>
+
+<body>
+
+
+
+	<div class="container">
+	<!-- Noscript message -->
+		<div class="row">
+			<div class="col-md-12">
+			<noscript>
+			<div class="alert alert-warning text-center"><strong>Javascript is disabled.</strong> Some parts of this website will not work correctly.</div>
+			</noscript>
+			</div>
+		</div>
+		<!-- Logo -->
+		<div class="row">
+			<div class="col-md-8"></div>
+			<div class="col-md-4 text-right static-logo"><img id="logo" src="assets/taw.png" alt="TAW Logo"/></div>
+		</div>
+	</div>
+
+
+	<div id="carousel" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-bg-img item active" style="background:url(http://images.akamai.steamusercontent.com/ugc/276222511129336156/4AB0AA2BB431019BC7EBA60F6E2D99CD44CEEBE1/); background-position: center center; background-size:cover; background-repeat:no-repeat;"></div>
+			<div class="carousel-bg-img item" style="background:url(http://images.akamai.steamusercontent.com/ugc/264964779787143100/66B59C3D940973E263ADA76FF9701AA1D3F86B4D/); background-position: center center; background-size:cover; background-repeat:no-repeat;"></div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var bootCarousel = $(".carousel");
+				bootCarousel.prepend("<ol class='carousel-indicators'></ol>");
+				var indicators = $(".carousel-indicators");
+				bootCarousel.find(".carousel-inner").children(".item").each(function(index) {				
+					$(this).attr("id","carousel-img-"+(index+1));
+					if(index === 0) indicators.append("<li data-target='#carousel' data-slide-to='" + index + "' class='active'></li>\n");
+					else indicators.append("<li data-target='#carousel' data-slide-to='" + index + "' class=''></li>\n");			    
+				});
+			});
+		</script>
+		<a class="left carousel-control" href="#carousel" data-slide="prev">
+		  <span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#carousel" data-slide="next">
+		  <span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+
+
+
+ 	{{ content }}
+
+
+<!-- copy to clipboard -->
+<script type="text/javascript">
+$(document).ready(function(){
+	ZeroClipboard.config(
+	{
+		swfPath: 'assets/ZeroClipboard.swf',
+	});
+	var client = new ZeroClipboard($(".copy-button"));
+	client.on( "ready", function( readyEvent ) {
+		console.log( "ZeroClipboard SWF is ready!");
+		client.on( "aftercopy", function( event ) {
+			console.log("Copied text to clipboard: " + event.data["text/plain"] );
+		});
+	});
+});
+</script>
+
+<!-- Google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79513778-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+</body>
+
+</html>
