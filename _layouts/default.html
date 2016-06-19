@@ -11,13 +11,13 @@
 	<!--[if lt IE 9]>
 	  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<link href="/{{site.baseurl}}/assets/styles.css" rel="stylesheet">
+	<link href="{{site.baseurl}}assets/styles.css" rel="stylesheet">
 
 	<!-- script references -->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-	<script src="/{{site.baseurl}}/assets/ZeroClipboard.min.js"></script>
+	<script src="{{site.baseurl}}assets/ZeroClipboard.min.js"></script>
 
   
 </head>
@@ -38,7 +38,7 @@
 		<!-- Logo -->
 		<div class="row">
 			<div class="col-md-8"></div>
-			<div class="col-md-4 text-right static-logo"><img id="logo" src="/{{site.baseurl}}/assets/taw.png" alt="TAW Logo"/></div>
+			<div class="col-md-4 text-right static-logo"><img id="logo" src="{{site.baseurl}}assets/taw.png" alt="TAW Logo"/></div>
 		</div>
 	</div>
 
@@ -70,7 +70,7 @@
 
 
 
- 	{{ content }}
+ 	{{content}}
 
 
 <!-- copy to clipboard -->
@@ -78,7 +78,7 @@
 $(document).ready(function(){
 	ZeroClipboard.config(
 	{
-		swfPath: '/{{site.baseurl}}/assets/ZeroClipboard.swf',
+		swfPath: '{{site.baseurl}}assets/ZeroClipboard.swf',
 	});
 	var client = new ZeroClipboard($(".copy-button"));
 	client.on( "ready", function( readyEvent ) {
