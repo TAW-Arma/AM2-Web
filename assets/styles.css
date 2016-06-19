@@ -2,7 +2,7 @@
 ---
 /* General */
 body {
-	background: url(/{{page.baseurl}}/assets/bg.jpeg);
+	background: url({{site.baseurl}}/assets/bg.jpeg);
 }
 /* Logo & Header */
 noscript > .alert {
