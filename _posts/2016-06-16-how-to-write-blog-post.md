@@ -10,16 +10,17 @@ See https://jekyllrb.com/docs/posts/. Once something is pushed to https://github
 
 # How do I make a post ?
 1. You need a github account.
-2. Then you need your own version of this website in which you can make changes. Aka you need to fork this repository 
+1. Anyone can do the rest. But if you have write access to this repository you can only do steeps 5 to 10.
+1. Then you need your own version of this website in which you can make changes. Aka you need to fork this repository 
 ![](http://image.prntscr.com/image/38e1443e31ec4664bbe9ff2672164322.png)
-3. Go to your forked repository.
+1. Go to your forked repository.
 ![](http://image.prntscr.com/image/3f417771bc734513a00fa613b1172583.png)
-4. Switch to gh-pages branch.
+1. Switch to gh-pages branch.
 ![](http://image.prntscr.com/image/8e015b2febef473d9028e21faae9c7cb.png)
-5. Go to _posts folder.
-6. Create new file with name: YEAR-MONTH-DAY-title.MARKUP where the MARKUP means a FORMAT you want to use. ATM you can use .html or .md
+1. Go to _posts folder.
+1. Create new file with name: YEAR-MONTH-DAY-title.MARKUP where the MARKUP means a FORMAT you want to use. ATM you can use .html or .md
    I prefer the .md [markdown](https://guides.github.com/features/mastering-markdown/) because you can Preview it directly on github.
-7. Copy paste the YAML Front Matter section at the top of your post. Edit the section according to you.
+1. Copy paste the YAML Front Matter section at the top of your post. Edit the section according to you.
 
     ```
     ---
@@ -28,11 +29,11 @@ See https://jekyllrb.com/docs/posts/. Once something is pushed to https://github
     author: aeroson
     ---
     ```
-8. Add post contents. Preview changes to see how it will look.
-9. Commit changes.
-10. Once you are done you can now request to merge the changes you made. Aka request to have the post added to the original repository you copied(forked) from. Also called pull request, as in the changes you made are pulled from your repository to the original one.
+1. Add post contents. Preview changes to see how it will look.
+1. Commit changes.
+1. Once you are done you can now request to merge the changes you made. Aka request to have the post added to the original repository you copied(forked) from. Also called pull request, as in the changes you made are pulled from your repository to the original one.
 ![](http://image.prntscr.com/image/201e803f513c442b937dc2c6d47d6491.png)
-11. Select branches gh-pages and Create pull request
+1. Select branches gh-pages and Create pull request
 ![](http://image.prntscr.com/image/0f78ccb8934342c7bd03f8952dd5a7ce.png)
-12. Wait until it's accepted.
-13. Eat cake.
+1. Wait until it's accepted.
+1. Eat cake.
