@@ -1,2 +1,3 @@
 markdown: kramdown
 highlighter: rouge
+baseurl: am2.taw.net
