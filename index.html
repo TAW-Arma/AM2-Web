@@ -17,7 +17,7 @@ title: TAW Arma - 2nd Battalion
 				<h4>Latest info from Twitter</h4>
 			</div>
 			<div class="panel-body">        
-				<a class="twitter-timeline" data-height="850" href="https://twitter.com/TAW_net_Arma">Tweets by TAW_net_Arma</a> <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script></script>
+				<a class="twitter-timeline" data-height="850" href="https://twitter.com/TAW_AM2">Latest Tweets by TAW_AM2</a> <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script></script>
 			</div>
 		</div>
 
@@ -48,12 +48,12 @@ title: TAW Arma - 2nd Battalion
 						if($this.hasClass("optional-modpack")) modpack = "@taw_am2_cup;@taw_am2_content;@taw_div_content;@taw_am2_cba;@taw_div_core;@optionals;";
 						if($this.hasClass("ww2-modpack")) modpack = "@taw_am2_cba;@taw_div_core;@ww2";
 
-						var password = "rewards"
+						var password = ""
 						if($this.attr("data-password")) password = $this.attr("data-password");
 
 						var port = $this.attr('data-port');
 
-						var href="steam://run/107410//-noLauncher%20-noSplash%20-noPause%20-world=empty%20-noLogs%20-connect=am2.taw.net%20-port="+port+"%20-password="+password+"%20-mod="+modpack;
+						var href="steam://run/107410//-noLauncher%20-noSplash%20-noPause%20-world=empty%20-noLogs%20-connect=am2.taw.net%20-port="+port+"%20-mod="+modpack;
 
 						$this.attr('href', href);
 					});
@@ -62,8 +62,8 @@ title: TAW Arma - 2nd Battalion
 				</script>
 				<div class="list-group">
 <a class="list-group-item server-link normal-modpack" data-port="2402">Battalion Server = 2402<span class="badge">Normal</span></a>
-<a class="list-group-item server-link optional-modpack" data-password="donut" data-port="2442">PP Optional ops = 2442<span class="badge">Normal + Optional</span></a>
-<a class="list-group-item server-link ww2-modpack" data-password="donut" data-port="2442">WW2 = 2442<span class="badge">WW2</span></a>
+<a class="list-group-item server-link optional-modpack" data-password="" data-port="2442">PP Optional ops = 2442<span class="badge">Normal + Optional</span></a>
+<a class="list-group-item server-link ww2-modpack" data-password="" data-port="2442">WW2 = 2442<span class="badge">WW2</span></a>
 <a class="list-group-item server-link normal-modpack" data-port="2922">Loadout & squad box = 2922<span class="badge">Normal</span></a>
 <a class="list-group-item server-link normal-modpack" data-port="2702">CTC1 = 2702<span class="badge">Normal</span></a>
 <a class="list-group-item server-link normal-modpack" data-port="2712">CTC2 = 2712<span class="badge">Normal</span></a>
