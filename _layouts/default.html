@@ -53,11 +53,24 @@
 
 
 	<div id="carousel" class="carousel slide" data-ride="carousel">
-		<div class="carousel-inner">
-			<div class="carousel-bg-img item active" style="background:url(http://images.akamai.steamusercontent.com/ugc/276222511129336156/4AB0AA2BB431019BC7EBA60F6E2D99CD44CEEBE1/); background-position: center center; background-size:cover; background-repeat:no-repeat;"></div>
-			<div class="carousel-bg-img item" style="background:url(http://images.akamai.steamusercontent.com/ugc/264964779787143100/66B59C3D940973E263ADA76FF9701AA1D3F86B4D/); background-position: center center; background-size:cover; background-repeat:no-repeat;"></div>
-			<div class="carousel-bg-img item" style="background:url(http://images.akamai.steamusercontent.com/ugc/267218898430532937/D2F3F43FE1E3235C05C02FBB52DF109535A9F7EF/); background-position: center center; background-size:cover; background-repeat:no-repeat;"></div>
-		would it
+		<div class="carousel-inner" id="carousel-gallery">
+			<script type="text/javascript">
+				$(document).ready(function(){
+					var target = $("#carousel-gallery");
+					var images = [ // add carousel gallery image urls here
+"http://images.akamai.steamusercontent.com/ugc/267218898430532937/D2F3F43FE1E3235C05C02FBB52DF109535A9F7EF/",
+"http://images.akamai.steamusercontent.com/ugc/264964779787143100/66B59C3D940973E263ADA76FF9701AA1D3F86B4D/",
+"http://images.akamai.steamusercontent.com/ugc/276222511129336156/4AB0AA2BB431019BC7EBA60F6E2D99CD44CEEBE1/",
+"http://image.prntscr.com/image/0143230eda7e4ba6ab4d1b7b07887277.png",
+					];
+					for (i = 0; i < images.length; ++i) {
+						var image = images[i];
+						var active = "";
+						if(i == 0) active = " active";
+						target.append('<div class="carousel-bg-img item'+active+'" style="background:url('+image+'); background-position: center center; background-size:cover; background-repeat:no-repeat;"></div>');
+					}
+				});
+			</script>
 		</div>
 		<script type="text/javascript">
 			$(document).ready(function(){
