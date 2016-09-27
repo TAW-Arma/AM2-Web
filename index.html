@@ -165,23 +165,21 @@ title: TAW Arma - 2nd Battalion
 				<span class="glyphicon glyphicon-facetime-video"></span>
 				<h4>Latest video from SOFF</h4>
 			</div>
+			<iframe id="soff-youtube" style="width: 100%;min-height: 410px;"></iframe>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$.get(
+						"https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PL5PCok941PCetLbGwDhehb1Anki1wKgLO&key=AIzaSyCCWbZiuB1h9k-SkL9eEujHdwls30QnZG4",
+						function(response) { 
+							var lastVideoIndex = response.items.length - 1;
+							$("#soff-youtube").attr("src", "https://www.youtube.com/embed?listType=playlist&amp;list=PL5PCok941PCetLbGwDhehb1Anki1wKgLO&amp;index=" + lastVideoIndex);
+						}
+					);
+				});
+			</script>
 		</div>
 
-		<iframe id ="soff-youtube" style="width: 100%;min-height: 410px;"></iframe>
-
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$.get(
-					"https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PL5PCok941PCetLbGwDhehb1Anki1wKgLO&key=AIzaSyCCWbZiuB1h9k-SkL9eEujHdwls30QnZG4",
-					function(response) { 
-						var lastVideoIndex = response.items.length - 1;
-						$("#soff-youtube").attr("src", "https://www.youtube.com/embed?listType=playlist&amp;list=PL5PCok941PCetLbGwDhehb1Anki1wKgLO&amp;index=" + lastVideoIndex);
-					}
-				);
-			});
-		</script>
-
-
+	
 	</div>
 
 
