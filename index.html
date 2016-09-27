@@ -26,7 +26,10 @@ title: TAW Arma - 2nd Battalion
 
 
 		<div class="panel panel-primary">
-			<div class="panel-heading"><span class="glyphicon glyphicon-globe pull-right"></span><h4>Arma 3 Servers</h4></div>
+			<div class="panel-heading">
+				<span class="glyphicon glyphicon-globe pull-right"></span>
+				<h4>Arma 3 Servers</h4>
+			</div>
 			<div class="panel-body">
 				<div class="alert alert-info" role="alert">
 					<h4>IP = am2.taw.net</h4>
@@ -73,8 +76,126 @@ title: TAW Arma - 2nd Battalion
 
 
 
+	</div>
+
+
+
+
+
+	<div class="col-md-4 col-sm-6">
+
+
+
 		<div class="panel panel-primary">
-			<div class="panel-heading"><span class="glyphicon glyphicon-save pull-right"></span><h4>Modpacks</h4></div>
+			<div class="panel-heading">
+				<span class="glyphicon glyphicon-time pull-right"></span>
+				<h4>Practices are when?</h4>
+			</div>
+			<div class="panel-body">
+			   <table class="table">
+					<thead>
+						<tr>
+							<th>
+								Type
+							</th>
+							<th>
+								Time in GMT
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								Mandatory
+							</td>
+							<td>
+								Sunday 19:30 - 21:30
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Mandatory
+							</td>
+							<td>
+								Tuesday 19:30 - 21:30
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Optional
+							</td>
+							<td>
+								Saturday 18:30
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>	
+
+
+
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<span class="glyphicon glyphicon-flag pull-right"></span>
+				<h4>Links</h4>
+			</div>
+			<div class="panel-body">
+				<div class="list-group">
+					<a href="http://taw.net" class="list-group-item" target="_blank">TAW website</a>
+					<a href="https://www.reddit.com/r/FindAUnit/comments/4hnabq/a3recruitingvideo_tawnet_are_now_recruiting//" class="list-group-item" target="_blank">Recruitment thread on Reddit</a>
+					<a href="https://steamcommunity.com/app/107410/discussions/10/360670708780651525/" class="list-group-item" target="_blank">Recruitment thread on Steam</a>
+					<a href="https://github.com/TAW-Arma/" class="list-group-item" target="_blank">TAW AM GitHub</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+
+	<div class="col-md-8 col-sm-6">
+
+
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<span class="glyphicon glyphicon-facetime-video"></span>
+				<h4>Latest video from SOFF</h4>
+			</div>
+		</div>
+
+		<iframe id ="soff-youtube" style="width: 100%;min-height: 410px;"></iframe>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$.get(
+					"https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PL5PCok941PCetLbGwDhehb1Anki1wKgLO&key=AIzaSyCCWbZiuB1h9k-SkL9eEujHdwls30QnZG4",
+					function(response) { 
+						var lastVideoIndex = response.items.length - 1;
+						$("#soff-youtube").attr("src", "https://www.youtube.com/embed?listType=playlist&amp;list=PL5PCok941PCetLbGwDhehb1Anki1wKgLO&amp;index=" + lastVideoIndex);
+					}
+				);
+			});
+		</script>
+
+
+	</div>
+
+
+ 
+
+
+	<div class="col-md-4 col-sm-6">
+
+
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<span class="glyphicon glyphicon-save pull-right"></span>
+				<h4>Modpacks</h4>
+			</div>
 			<div class="panel-body">
 
 				<table class="table">
@@ -145,79 +266,35 @@ title: TAW Arma - 2nd Battalion
 		</div>
 
 
-	</div>
-
-
-
-
-	<div class="col-md-4 col-sm-6">
-
-
-
 		<div class="panel panel-primary">
-			<div class="panel-heading"><span class="glyphicon glyphicon-time pull-right"></span>
-				<h4>Practices are when?</h4>
-			</div>
-			<div class="panel-body">
-			   <table class="table">
-					<thead>
-						<tr>
-							<th>
-								Type
-							</th>
-							<th>
-								Time in GMT
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>
-								Mandatory
-							</td>
-							<td>
-								Sunday 19:30 - 21:30
-							</td>
-						</tr>
-						<tr>
-							<td>
-								Mandatory
-							</td>
-							<td>
-								Tuesday 19:30 - 21:30
-							</td>
-						</tr>
-						<tr>
-							<td>
-								Optional
-							</td>
-							<td>
-								Saturday 18:30
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-		
-
-
-
-		<div class="panel panel-primary">
-			<div class="panel-heading"><span class="glyphicon glyphicon-flag pull-right"></span>
-				<h4>Links</h4>
+			<div class="panel-heading">
+				<span class="glyphicon glyphicon-file pull-right"></span>
+				<h4>Blog posts</h4>
 			</div>
 			<div class="panel-body">
 				<div class="list-group">
-					<a href="http://taw.net" class="list-group-item" target="_blank">TAW website</a>
-					<a href="https://www.reddit.com/r/FindAUnit/comments/4hnabq/a3recruitingvideo_tawnet_are_now_recruiting//" class="list-group-item" target="_blank">Recruitment thread on Reddit</a>
-					<a href="https://steamcommunity.com/app/107410/discussions/10/360670708780651525/" class="list-group-item" target="_blank">Recruitment thread on Steam</a>
-					<a href="https://github.com/TAW-Arma/" class="list-group-item" target="_blank">TAW AM GitHub</a>
+				{% for post in site.posts %}
+					<a href="{{site.baseurl}}{{post.url}}" class="list-group-item">
+						{{post.title}}
+						<span class="badge">by {{post.author}}</span>
+						<!-- <p class="list-group-item-text">{{post.excerpt}}</p> -->
+					</a>
+				{% endfor %}						
 				</div>
 				<div class="clearfix"></div>
 			</div>
 		</div>
 
+
+	</div>
+
+
+
+
+
+
+
+	<div class="col-md-4 col-sm-6">
 
 
 		<div class="panel panel-primary">
@@ -240,28 +317,11 @@ title: TAW Arma - 2nd Battalion
 			</div>
 		</div>
 
-		<div class="panel panel-primary">
-			<div class="panel-heading"><span class="glyphicon glyphicon-file pull-right"></span>
-				<h4>Blog posts</h4>
-			</div>
-			<div class="panel-body">
-				<div class="list-group">
-				{% for post in site.posts %}
-					<a href="{{site.baseurl}}{{post.url}}" class="list-group-item">
-						{{post.title}}
-						<span class="badge">by {{post.author}}</span>
-						<!-- <p class="list-group-item-text">{{post.excerpt}}</p> -->
-					</a>
-				{% endfor %}						
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-
-
-
 
 	</div>
+
+
+
 
 
 
