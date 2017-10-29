@@ -44,9 +44,9 @@ title: TAW Arma - 2nd Battalion
 						var $this = $(this);
 
 						var modpack = "";
-						if($this.hasClass("normal-modpack")) modpack = "@taw_am2_alive;@taw_am2_cba;@taw_am2_content;@taw_am2_cup;@taw_div_core;";
-						if($this.hasClass("optional-modpack")) modpack = "@taw_am2_cup;@taw_am2_content;@taw_div_content;@taw_am2_cba;@taw_div_core;@optionals;";
-						if($this.hasClass("ww2-modpack")) modpack = "@taw_am2_cba;@taw_div_core;@ww2";
+						if($this.hasClass("normal-modpack")) modpack = "@taw_am2_content;@taw_am2_cup;@taw_am2_core;@taw_div_core;";
+						if($this.hasClass("optional-modpack")) modpack = "@taw_div_core;@taw_div_content;@taw_am2_cup;@taw_am2_content;@optionals;";
+						if($this.hasClass("dwoe")) modpack = "@taw_div_core;@taw_am2_cup;@TAW_Div_DWOE;";
 
 						var password = ""
 						if($this.attr("data-password")) password = $this.attr("data-password");
@@ -67,7 +67,10 @@ title: TAW Arma - 2nd Battalion
 <a class="list-group-item server-link normal-modpack" data-port="2712">CTC2 = 2712<span class="badge">Normal</span></a>
 <a class="list-group-item server-link normal-modpack" data-port="2722">RHQ1 = 2722<span class="badge">Normal</span></a>
 <a class="list-group-item server-link normal-modpack" data-port="2732">RHQ2 = 2732<span class="badge">Normal</span></a>
+<a class="list-group-item server-link normal-modpack" data-port="2942">Training Server 1 = 2942<span class="badge">Normal</span></a>
+<a class="list-group-item server-link normal-modpack" data-port="2952">Training Server 2 = 2952<span class="badge">Normal</span></a>
 <a class="list-group-item server-link normal-modpack" data-port="2932">Rest and Recuperation = 2932<span class="badge">Normal</span></a>
+<a class="list-group-item server-link dwoe" data-port="2912">DWOE = 2912<span class="badge">DWOE</span></a>
 				</div>
 			</div>
 		</div>
@@ -232,16 +235,6 @@ title: TAW Arma - 2nd Battalion
 							</td>
 							<td style="text-align: right;">
 								<button class="btn btn-xs btn-success copy-button" id="repo-copy-optional" data-clipboard-text="http://am2.taw.net/repo/optional/.a3s/autoconfig" title="Click to copy me.">
-									Copy
-								</button>
-							</td>
-						</tr>
-						 <tr>
-							<td style="text-align: left;">
-								 WW2
-							</td>
-							<td style="text-align: right;">
-								<button class="btn btn-xs btn-success copy-button" id="repo-copy-ww2" data-clipboard-text="http://am2.taw.net/repo/WW2/.a3s/autoconfig" title="Click to copy me.">
 									Copy
 								</button>
 							</td>
